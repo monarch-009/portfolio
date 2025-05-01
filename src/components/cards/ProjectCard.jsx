@@ -65,7 +65,7 @@ const Date = styled.div`
 `;
 const Description = styled.div`
   font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 99};
+  color: ${({ theme }) => theme.text_secondary + 90};
   overflow: hidden;
   margin-top: 8px;
   display: -webkit-box;
@@ -73,6 +73,7 @@ const Description = styled.div`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+  font-style: italic;
 `;
 const Members = styled.div`
   display: flex;
@@ -113,6 +114,10 @@ const ProjectCard = ({ project }) => {
       <Button href={project.github} target="_blank">
         View Code
       </Button>
+      <Button href={project.webapp} target="_blank">
+        View Live
+      </Button>
+      
     </Card>
   );
 };
